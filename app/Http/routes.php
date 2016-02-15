@@ -16,5 +16,11 @@ Route::get('/admin', function () {
 });
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/store', 'StoreController@index');
+Route::get('/products/{id}', 'StoreController@show');
+
+Route::get('/blog','BlogController@index');
+
 Route::get('login','Auth\AuthController@index');
 Route::get('validateLogin','Auth\AuthController@validateLogin');

@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,23 +51,23 @@ return [
             'database' => database_path('database.sqlite'),
             'prefix'   => '',
         ],
-        'mongodb' => array(
-            'driver'   => 'mongodb',
-            'host'     => env('DB_HOST', '192.168.88.10'),
-            'port'     => env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'wellness_db'),
-            'username' => env('DB_USERNAME', 'wellness'),
-            'password' => env('DB_PASSWORD', 'password'),
-            'options' => array(
-                'db' => 'admin' // sets the authentication database required by mongo 3
-            )
-        ),
+        // 'mongodb' => array(
+        //     'driver'   => 'mongodb',
+        //     'host'     => env('DB_HOST', '192.168.88.10'),
+        //     'port'     => env('DB_PORT', 27017),
+        //     'database' => env('DB_DATABASE', 'wellness_db'),
+        //     'username' => env('DB_USERNAME', 'wellness'),
+        //     'password' => env('DB_PASSWORD', 'password'),
+        //     'options' => array(
+        //         'db' => 'admin' // sets the authentication database required by mongo 3
+        //     )
+        // ),
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => env('DB_HOST'),
+            'database'  => env('DB_DATABASE', 'wellness_db'),
+            'username'  => env('DB_USERNAME', 'vagrant'),
+            'password'  => env('DB_PASSWORD', 'vagrant'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
